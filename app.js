@@ -85,7 +85,24 @@ const sectionCenter = document.querySelector('.section-center');
 const filterBtns = document.querySelectorAll('.filter-btn');
 
 // load items
-window.addEventListener('DOMContentLoaded', displayMenuItem(menu));
+window.addEventListener('DOMContentLoaded', () => {
+  displayMenuItem(menu);
+  const categories = menu.reduce(
+    (values, item) => {
+      if (!values.includes(item.category)) {
+        values.push(item.category);
+      }
+      return values;
+    },
+    ['all']
+  );
+
+  const categoryBtns = categories.map((category) => {
+    return `
+      
+    `;
+  });
+});
 
 // filter items
 filterBtns.forEach((btn) => {
