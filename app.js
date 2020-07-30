@@ -82,7 +82,7 @@ window.addEventListener('DOMContentLoaded', displayMenuItem(menu));
 // filter items
 filterBtns.forEach((btn) => {
   btn.addEventListener('click', (e) => {
-    console.log(e.currentTarget.dataset);
+    const category = e.currentTarget.dataset.id;
   });
 });
 
