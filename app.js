@@ -97,11 +97,13 @@ window.addEventListener('DOMContentLoaded', () => {
     ['all']
   );
 
-  const categoryBtns = categories.map((category) => {
-    return `
-      
+  const categoryBtns = categories
+    .map((category) => {
+      return `
+      <button class="filter-btn" type="button" data-id=${category}>${category}</button>
     `;
-  });
+    })
+    .join('');
 });
 
 // filter items
