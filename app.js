@@ -94,5 +94,5 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   displayMenu = displayMenu.join('');
-  console.log(displayMenu);
+  sectionCenter.innerHTML = displayMenu;
 });
