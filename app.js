@@ -83,6 +83,16 @@ window.addEventListener('DOMContentLoaded', displayMenuItem(menu));
 filterBtns.forEach((btn) => {
   btn.addEventListener('click', (e) => {
     const category = e.currentTarget.dataset.id;
+    const menuCategory = menu.filter((menuItem) => {
+      if (menuItem.category === category) {
+        return menuItem;
+      }
+    });
+    if (category === 'all') {
+      displayMenuItem(menu);
+    } else {
+      displayMenuItem(menuCategory);
+    }
   });
 });
 
